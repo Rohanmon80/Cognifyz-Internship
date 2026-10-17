@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+--background: #101110;
+--surface: #191b19;
+--text: #f5f5f0;
+--muted: #a2a69e;
+--accent: #d7f171;
+--border: rgba(255, 255, 255, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+scroll-padding-top: 90px;
+}
+
+body {
+margin: 0;
+background: var(--background);
+color: var(--text);
+font-family: 'DM Sans', sans-serif;
+line-height: 1.6;
+}
+
+a {
+text-decoration: none;
+}
+
+.site-header {
+position: sticky;
+top: 0;
+z-index: 100;
+background: rgba(16, 17, 16, 0.92);
+backdrop-filter: blur(14px);
+border-bottom: 1px solid var(--border);
+}
+
+.custom-navbar {
+background: transparent;
+padding: 15px 0;
+}
+
+.custom-logo {
+color: var(--text);
+font-family: 'Space Grotesk', sans-serif;
+font-size: 1.6rem;
+font-weight: 700;
+letter-spacing: -1px;
+}
+
+.custom-logo span {
+color: var(--accent);
+}
+
+.custom-navbar .container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.nav-links {
+display: flex;
+gap: 30px;
+}
+
+.nav-links a {
+color: var(--muted);
+transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+color: var(--accent);
+}
+
+.hero-section {
+padding: 110px 0 120px;
+}
+
+.eyebrow {
+margin-bottom: 16px;
+color: var(--accent);
+font-size: 0.75rem;
+font-weight: 700;
+letter-spacing: 2px;
+}
+
+.hero-section h1 {
+color: var(--text);
+font-family: 'Space Grotesk', sans-serif;
+font-size: clamp(3rem, 7vw, 6.5rem);
+font-weight: 600;
+line-height: 1.08;
+letter-spacing: -4px;
+}
+
+.hero-section h1 span {
+color: var(--accent);
+}
+
+.hero-description {
+max-width: 550px;
+margin: 25px 0 32px;
+color: var(--muted);
+font-size: 1.05rem;
+}
+
+.explore-button {
+display: inline-block;
+padding: 13px 20px;
+border-radius: 4px;
+background: var(--accent);
+color: #151712;
+font-weight: 700;
+transition: transform 0.2s ease;
+}
+
+.explore-button:hover {
+color: #151712;
+transform: translateY(-3px);
+}
+
+.technology-section {
+padding: 70px 0 110px;
+background: #141614;
+border-top: 1px solid var(--border);
+border-bottom: 1px solid var(--border);
+}
+
+.section-heading {
+display: flex;
+justify-content: space-between;
+align-items: end;
+gap: 24px;
+margin-bottom: 38px;
+}
+
+.section-heading h2,
+.about-content h2 {
+color: var(--text);
+font-family: 'Space Grotesk', sans-serif;
+font-size: clamp(2rem, 4vw, 3.5rem);
+font-weight: 600;
+line-height: 1.2;
+}
+
+.section-description {
+max-width: 300px;
+color: var(--muted);
+}
+
+.tech-card {
+height: 100%;
+overflow: hidden;
+background: var(--surface);
+border: 1px solid var(--border);
+border-radius: 7px;
+box-shadow: none;
+transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.tech-card:hover {
+transform: translateY(-6px);
+border-color: rgba(215, 241, 113, 0.55);
+}
+
+.tech-card .card-image {
+overflow: hidden;
+}
+
+.tech-card .card-image img {
+object-fit: cover;
+transition: transform 0.5s ease;
+}
+
+.tech-card:hover .card-image img {
+transform: scale(1.05);
+}
+
+.tech-card .card-content {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+flex-grow: 1;
+padding: 25px;
+background: var(--surface);
+}
+
+.category-label {
+margin-bottom: 12px;
+color: var(--accent);
+font-size: 0.7rem;
+font-weight: 700;
+letter-spacing: 1.5px;
+}
+
+.tech-card .title {
+margin-bottom: 12px;
+color: var(--text);
+font-family: 'Space Grotesk', sans-serif;
+}
+
+.tech-card .description {
+margin-bottom: 22px;
+color: var(--muted);
+font-size: 0.92rem;
+line-height: 1.8;
+}
+
+.card-link {
+margin-top: auto;
+color: var(--accent);
+font-size: 0.9rem;
+font-weight: 700;
+}
+
+.card-link:hover {
+color: white;
+}
+
+.about-section {
+padding: 100px 0;
+}
+
+.about-content h2 {
+margin-bottom: 22px;
+}
+
+.about-content > p:not(.eyebrow) {
+max-width: 600px;
+margin-bottom: 28px;
+color: var(--muted);
+}
+
+.site-footer {
+padding: 30px 0;
+border-top: 1px solid var(--border);
+}
+
+.footer-content {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 20px;
+}
+
+.footer-content p {
+color: var(--muted);
+font-size: 0.82rem;
+}
+
+@media (max-width: 991px) {
+.hero-section {
+padding: 85px 0;
+}
+
+
+.section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.footer-content {
+    flex-wrap: wrap;
+}
+
+
+}
+
+@media (max-width: 575px) {
+.custom-navbar {
+padding: 15px 10px;
+}
+
+
+.custom-logo {
+    font-size: 1.35rem;
+}
+
+.nav-links {
+    gap: 12px;
+}
+
+.nav-links a {
+    font-size: 0.8rem;
+}
+
+.hero-section h1 {
+    letter-spacing: -2px;
+}
+
+.technology-section {
+    padding: 55px 0 70px;
+}
+
+.about-section {
+    padding: 70px 0;
+}
+
+.footer-content {
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+
+}
